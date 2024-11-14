@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-based Fun Facts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        button {
+          background-color: rgb(190, 104, 104);
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        button.active {
+          background-color: rgb(94, 34, 34); /* Orange color when the button is selected */
+        }
+
+        button:focus {
+          outline: none; /* Optional: removes the default focus outline */
+        }
+    </style>
+</head>
+<body>
+    <h1>Fact Trail</h1>
+    <hr>
+    <h2>Choose a Genre:</h2>
+
+
+    <div class="genre-buttons">
+        <!-- Set 'active' class to Music by default -->
+        <button id="musicBtn" class="active">Music</button>
+        <button id="filmBtn">Film</button>
+        <button id="artBtn">Art</button>
+        <button id="sportBtn">Sport</button>
+        <button id="historyBtn">History</button>
+        <button id="foodBtn">Food</button>
+    </div>
+
+    <hr>
+
+    <div id="locationInfo">
+        <h2>Your Location: <span id="locationName">Loading...</span></h2>
+        <hr>
+
+        <!-- Fact 1 -->
+        <div style="border: 2px solid white; background-color: rgb(190, 104, 104); border-radius: 5px; text-align: center; padding: 10px 20px; width: 500px; margin: 0 auto; margin-bottom: 20px;">
+            Fact 1: <span id="funFact1">Fetching fun fact...</span>
+        </div>
+
+        <!-- Fact 2 -->
+        <div style="border: 2px solid white; background-color: rgb(190, 104, 104); border-radius: 5px; text-align: center; padding: 10px 20px; width: 500px; margin: 0 auto; margin-bottom: 20px;">
+            Fact 2: <span id="funFact2">Fetching fun fact...</span>
+        </div>
+
+        <!-- Fact 3 -->
+        <div style="border: 2px solid white; background-color: rgb(190, 104, 104); border-radius: 5px; text-align: center; padding: 10px 20px; width: 500px; margin: 0 auto; margin-bottom: 20px;">
+            Fact 3: <span id="funFact3">Fetching fun fact...</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="image-container">
+        <img id="imageLocations" src="" alt="Location Image" style="width: 600px; height: auto;  border: 2px solid white;" />
+    </div>
+
+    <!-- Map div -->
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="app.js"></script>
+
+    <script>
+        // Get all button elements (without class)
+        const buttons = document.querySelectorAll('button');
+
+        // Add click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove the 'active' class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Add the 'active' class to the clicked button
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
