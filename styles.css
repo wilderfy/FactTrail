@@ -3,13 +3,19 @@ body {
     text-align: center;
     margin: 20px;
     background-color: #cfa1a1;
-    color: white
+    color: white;
+    justify-content: center;
+    box-sizing: border-box; 
+    object-fit: contain; 
 }
 
 #locationInfo {
     margin-top: 20px;
     font-size: 1.2em;
-    color: white
+    color: white;
+    justify-content: center;
+    box-sizing: border-box; 
+    object-fit: contain; 
 }
 
 button {
@@ -20,8 +26,53 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+    justify-content: center;
+    box-sizing: border-box; 
+    object-fit: contain; 
 }
 
 button:hover {
     background-color: #b0d66a;
 }
+
+.image-container {
+    justify-content: center;      /* Center horizontally */
+    height: 100vh;                /* Make the container height 100% of the viewport height */
+    width: 100%;                  /* Ensure the container spans full width */
+    padding: 0;                   /* Remove any default padding */
+    box-sizing: border-box;       /* Prevent the container from overflowing */
+}
+
+#imageLocations {
+    max-width: 100%;              /* Ensure the image doesn't overflow horizontally */
+    max-height: 100%;             /* Prevent the image from becoming too tall */
+    object-fit: contain;          /* Maintain aspect ratio without distortion */
+    border: 2px solid white;      /* Add a border if desired */
+}
+
+#funFact1 {
+    justify-content: center;
+    box-sizing: border-box; 
+    object-fit: contain; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+
+  }
+  hr {
+    border: none; /* Remove default styling */
+    border-top: 2px solid white; /* Add a custom line */
+    width: 100%; /* Adjust width to prevent full-width lines */
+    margin: 20px auto; /* Center the <hr> horizontally */
+  }
+
