@@ -25,7 +25,7 @@ const funFacts = {
             "b",
             "c"
         ],
-        "Tokyo": [
+        "Sunshine Coast": [
             "a",
             "b",
             "c"
@@ -43,7 +43,7 @@ const funFacts = {
             "b",
             "c"
         ],
-        "Tokyo": [
+        "Sunshine Coast": [
             "a",
             "b",
             "c"
@@ -61,7 +61,7 @@ const funFacts = {
             "b",
             "c"
         ],
-        "Tokyo": [
+        "Sunshine Coast": [
             "a",
             "b",
             "c"
